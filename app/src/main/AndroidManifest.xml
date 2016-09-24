@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--demo activity-->
+        <activity android:name=".demo.squareimageview.SquareImageViewActivity"></activity>
     </application>
 
 </manifest>
