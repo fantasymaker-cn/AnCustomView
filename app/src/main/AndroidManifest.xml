@@ -17,7 +17,8 @@
         </activity>
 
         <!--demo activity-->
-        <activity android:name=".demo.squareimageview.SquareImageViewActivity"></activity>
+        <activity android:name=".demo.squareimageview.SquareImageViewActivity"/>
+        <activity android:name=".demo.wrapcontentgridview.WrapContentGridViewActivity"/>
     </application>
 
 </manifest>

@@ -19,7 +19,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.fantasymaker.customviews.constant.Constant;
 import cn.fantasymaker.customviews.demo.squareimageview.SquareImageViewActivity;
+import cn.fantasymaker.customviews.demo.wrapcontentgridview.WrapContentGridViewActivity;
 import cn.fantasymaker.squareimageview.SquareImageView;
+import cn.fantasymaker.wrapcontentgridview.WrapContentGridView;
 
 import static cn.fantasymaker.customviews.constant.Constant.sIntentList;
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mRvBtns.setLayoutManager(new LinearLayoutManager(this));
-//        mRvBtns.setHasFixedSize(true);
+        mRvBtns.setHasFixedSize(true);
         initData();
         if (mButtonAdapter == null) {
             Log.d("aa", sIntentList.toString());
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         sIntentList.add(new Constant.IntentBean("正方形ImageView", SquareImageView.class.getSimpleName(), SquareImageViewActivity.class));
+        sIntentList.add(new Constant.IntentBean("包裹内容GridView", WrapContentGridView.class.getSimpleName(), WrapContentGridViewActivity.class));
     }
 
     public static class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ButtonViewHolder> {

@@ -1,1 +1,1 @@
-include ':app', ':squareimageview'
+include ':app', ':squareimageview', ':wrapcontentgridview'
