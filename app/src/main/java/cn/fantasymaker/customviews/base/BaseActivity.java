@@ -20,34 +20,53 @@
  *     SOFTWARE.
  */
 
-package cn.fantasymaker.customviews.demo.squareimageview;
+package cn.fantasymaker.customviews.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-
-import cn.fantasymaker.customviews.R;
-import cn.fantasymaker.customviews.base.BaseActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
 /**
- * Created :  2016-09-24
+ * Created :  2016-09-26
  * Author  :  Fantasymaker
  * Web     :  http://blog.fantasymaker.cn
  * Email   :  me@fantasymaker.cn
  */
-public class SquareImageViewActivity extends BaseActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
-    protected int setLayout() {
-        return R.layout.act_squareimageview;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(setLayout());
+        initTitleBar();
+        initView();
+        initData(savedInstanceState);
+    }
+
+    private void initTitleBar(){
+        String title = getIntent().getStringExtra("name");
+        if(title != null){
+            ActionBar actionBar = getSupportActionBar();
+            actionBar.setTitle(title);
+            actionBar.setDisplayShowHomeEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
-    protected void initView() {
-
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void initData(@Nullable Bundle savedInstanceState) {
+    protected abstract int setLayout();
 
-    }
+    protected abstract void initView();
+
+    protected abstract void initData(@Nullable Bundle savedInstanceState);
 }

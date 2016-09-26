@@ -24,7 +24,6 @@ package cn.fantasymaker.customviews.demo.wrapcontentgridview;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -34,6 +33,7 @@ import butterknife.ButterKnife;
 import cn.fantasymaker.ancustomview.SquareImageView;
 import cn.fantasymaker.ancustomview.WrapContentGridView;
 import cn.fantasymaker.customviews.R;
+import cn.fantasymaker.customviews.base.BaseActivity;
 
 /**
  * Created :  2016-09-25
@@ -41,7 +41,7 @@ import cn.fantasymaker.customviews.R;
  * Web     :  http://blog.fantasymaker.cn
  * Email   :  me@fantasymaker.cn
  */
-public class WrapContentGridViewActivity extends AppCompatActivity {
+public class WrapContentGridViewActivity extends BaseActivity {
 
     @BindView(R.id.wcgv)
     WrapContentGridView mWcgv;
@@ -49,11 +49,17 @@ public class WrapContentGridViewActivity extends AppCompatActivity {
     private GridAdapter mGridAdapter;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_wrapcontentgridview);
-        ButterKnife.bind(this);
+    protected int setLayout() {
+        return R.layout.act_wrapcontentgridview;
+    }
 
+    @Override
+    protected void initView() {
+        ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void initData(@Nullable Bundle savedInstanceState) {
         if (mGridAdapter == null) {
             mGridAdapter = new GridAdapter();
             mWcgv.setAdapter(mGridAdapter);
