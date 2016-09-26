@@ -17,11 +17,11 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.fantasymaker.ancustomview.SquareImageView;
+import cn.fantasymaker.ancustomview.WrapContentGridView;
 import cn.fantasymaker.customviews.constant.Constant;
 import cn.fantasymaker.customviews.demo.squareimageview.SquareImageViewActivity;
 import cn.fantasymaker.customviews.demo.wrapcontentgridview.WrapContentGridViewActivity;
-import cn.fantasymaker.squareimageview.SquareImageView;
-import cn.fantasymaker.wrapcontentgridview.WrapContentGridView;
 
 import static cn.fantasymaker.customviews.constant.Constant.sIntentList;
 

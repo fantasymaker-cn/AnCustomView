@@ -31,9 +31,9 @@ import android.widget.BaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.fantasymaker.ancustomview.SquareImageView;
+import cn.fantasymaker.ancustomview.WrapContentGridView;
 import cn.fantasymaker.customviews.R;
-import cn.fantasymaker.squareimageview.SquareImageView;
-import cn.fantasymaker.wrapcontentgridview.WrapContentGridView;
 
 /**
  * Created :  2016-09-25

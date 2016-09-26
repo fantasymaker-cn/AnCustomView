@@ -10,7 +10,7 @@
         android:background="#ccc"
         android:orientation="vertical">
 
-        <cn.fantasymaker.wrapcontentgridview.WrapContentGridView
+        <cn.fantasymaker.ancustomview.WrapContentGridView
             android:id="@+id/wcgv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
