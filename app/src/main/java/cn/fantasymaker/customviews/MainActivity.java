@@ -19,17 +19,17 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.fantasymaker.ancustomview.SquareImageView;
 import cn.fantasymaker.ancustomview.WrapContentGridView;
-import cn.fantasymaker.customviews.constant.Constant;
+import cn.fantasymaker.customviews.bean.IntentBean;
 import cn.fantasymaker.customviews.demo.squareimageview.SquareImageViewActivity;
 import cn.fantasymaker.customviews.demo.wrapcontentgridview.WrapContentGridViewActivity;
 
-import static cn.fantasymaker.customviews.constant.Constant.sIntentList;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static ArrayList<IntentBean> sIntentList = new ArrayList<>();
+
     @BindView(R.id.rv_btns)
     RecyclerView mRvBtns;
-
     private ButtonAdapter mButtonAdapter;
 
     @Override
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             mButtonAdapter.setOnItemClickListener(new ButtonAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClicked(View view, int position) {
-                    Constant.IntentBean intentBean = sIntentList.get(position);
+                    IntentBean intentBean = sIntentList.get(position);
                     String viewName = intentBean.getName();
                     Class customViewClass = intentBean.getClazz();
                     Intent intent = new Intent(MainActivity.this, customViewClass);
@@ -61,17 +61,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        sIntentList.add(new Constant.IntentBean("正方形ImageView", SquareImageView.class.getSimpleName(), SquareImageViewActivity.class));
-        sIntentList.add(new Constant.IntentBean("包裹内容GridView", WrapContentGridView.class.getSimpleName(), WrapContentGridViewActivity.class));
+        sIntentList.add(new IntentBean("正方形ImageView", SquareImageView.class.getSimpleName(), SquareImageViewActivity.class));
+        sIntentList.add(new IntentBean("包裹内容GridView", WrapContentGridView.class.getSimpleName(), WrapContentGridViewActivity.class));
     }
 
     public static class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ButtonViewHolder> {
 
-        private ArrayList<Constant.IntentBean> mList;
+        private ArrayList<IntentBean> mList;
         private Context mContext;
         private OnItemClickListener mOnItemClickListener;
 
-        public ButtonAdapter(ArrayList<Constant.IntentBean> list) {
+        public ButtonAdapter(ArrayList<IntentBean> list) {
             mList = list;
         }
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(ButtonViewHolder holder, final int position) {
-            Constant.IntentBean intentBean = mList.get(position);
+            IntentBean intentBean = mList.get(position);
             String buttonText = intentBean.getNameZh();
             holder.mTv.setText(buttonText);
             holder.mLlRoot.setOnClickListener(new View.OnClickListener() {

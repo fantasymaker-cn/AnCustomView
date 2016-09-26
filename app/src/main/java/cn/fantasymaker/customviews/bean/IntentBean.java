@@ -20,9 +20,7 @@
  *     SOFTWARE.
  */
 
-package cn.fantasymaker.customviews.constant;
-
-import java.util.ArrayList;
+package cn.fantasymaker.customviews.bean;
 
 /**
  * Created :  2016-09-24
@@ -30,52 +28,48 @@ import java.util.ArrayList;
  * Web     :  http://blog.fantasymaker.cn
  * Email   :  me@fantasymaker.cn
  */
-public class Constant {
+public class IntentBean {
 
-    public static ArrayList<IntentBean> sIntentList = new ArrayList<>();
+    private String nameZh;
+    private String name;
+    private Class clazz;
 
-    public static class IntentBean {
-        private String nameZh;
-        private String name;
-        private Class clazz;
+    public IntentBean(String nameZh, String name, Class clazz) {
+        this.nameZh = nameZh;
+        this.name = name;
+        this.clazz = clazz;
+    }
 
-        public IntentBean(String nameZh, String name, Class clazz) {
-            this.nameZh = nameZh;
-            this.name = name;
-            this.clazz = clazz;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public Class getClazz() {
+        return clazz;
+    }
 
-        public Class getClazz() {
-            return clazz;
-        }
+    public void setClazz(Class clazz) {
+        this.clazz = clazz;
+    }
 
-        public void setClazz(Class clazz) {
-            this.clazz = clazz;
-        }
+    public String getNameZh() {
+        return nameZh;
+    }
 
-        public String getNameZh() {
-            return nameZh;
-        }
+    public void setNameZh(String nameZh) {
+        this.nameZh = nameZh;
+    }
 
-        public void setNameZh(String nameZh) {
-            this.nameZh = nameZh;
-        }
-
-        @Override
-        public String toString() {
-            return "IntentBean{" +
-                    "nameZh='" + nameZh + '\'' +
-                    ", name='" + name + '\'' +
-                    ", clazz=" + clazz +
-                    '}';
-        }
+    @Override
+    public String toString() {
+        return "IntentBean{" +
+                "nameZh='" + nameZh + '\'' +
+                ", name='" + name + '\'' +
+                ", clazz=" + clazz +
+                '}';
     }
 }
