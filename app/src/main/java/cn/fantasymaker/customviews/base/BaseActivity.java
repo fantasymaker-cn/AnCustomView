@@ -28,6 +28,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import cn.fantasymaker.customviews.constant.Constant;
+
 /**
  * Created :  2016-09-26
  * Author  :  Fantasymaker
@@ -46,7 +48,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     private void initTitleBar(){
-        String title = getIntent().getStringExtra("name");
+        String title = getIntent().getStringExtra(Constant.IntentKey.KEY_TITLE_NAME);
         if(title != null){
             ActionBar actionBar = getSupportActionBar();
             actionBar.setTitle(title);

@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 import cn.fantasymaker.ancustomview.SquareImageView;
 import cn.fantasymaker.ancustomview.WrapContentGridView;
 import cn.fantasymaker.customviews.bean.IntentBean;
+import cn.fantasymaker.customviews.constant.Constant;
 import cn.fantasymaker.customviews.demo.squareimageview.SquareImageViewActivity;
 import cn.fantasymaker.customviews.demo.wrapcontentgridview.WrapContentGridViewActivity;
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     String viewName = intentBean.getName();
                     Class customViewClass = intentBean.getClazz();
                     Intent intent = new Intent(MainActivity.this, customViewClass);
-                    intent.putExtra("name", viewName);
+                    intent.putExtra(Constant.IntentKey.KEY_TITLE_NAME, viewName);
                     MainActivity.this.startActivity(intent);
                 }
             });
