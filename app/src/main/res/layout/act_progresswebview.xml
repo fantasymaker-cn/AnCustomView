@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <cn.fantasymaker.ancustomview.ProgressWebView
+        android:id="@+id/pwv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_url"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:imeOptions="actionGo"
+            android:maxLines="1"
+            android:inputType="text"
+            android:hint="输入网址 http://..."
+            android:textColor="@android:color/white"
+            android:textColorHint="#666"
+            android:text="www.baidu.com"/>
+
+        <Button
+            android:id="@+id/btn_browse"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="浏览"/>
+
+    </LinearLayout>
+
+</LinearLayout>
