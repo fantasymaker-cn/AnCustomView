@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <cn.fantasymaker.ancustomview.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="#333">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#cccc00"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="BounceScrollView Demo\nPull down or up to test"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#00cccc"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="BounceScrollView Demo\nPull down or up to test"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#cc00cc"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="BounceScrollView Demo\nPull down or up to test"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#00cccc"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:text="BounceScrollView Demo\nPull down or up to test"/>
+
+        </LinearLayout>
+
+    </cn.fantasymaker.ancustomview.BounceScrollView>
+
+</LinearLayout>

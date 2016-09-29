@@ -22,6 +22,7 @@
         <activity android:name=".demo.squareimageview.SquareImageViewActivity"/>
         <activity android:name=".demo.wrapcontentgridview.WrapContentGridViewActivity"/>
         <activity android:name=".demo.progresswebview.ProgressWebViewActivity"/>
+        <activity android:name=".demo.bouncescrollview.BounceScrollViewActivity"/>
     </application>
 
 </manifest>

@@ -17,11 +17,13 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import cn.fantasymaker.ancustomview.BounceScrollView;
 import cn.fantasymaker.ancustomview.ProgressWebView;
 import cn.fantasymaker.ancustomview.SquareImageView;
 import cn.fantasymaker.ancustomview.WrapContentGridView;
 import cn.fantasymaker.customviews.bean.IntentBean;
 import cn.fantasymaker.customviews.constant.Constant;
+import cn.fantasymaker.customviews.demo.bouncescrollview.BounceScrollViewActivity;
 import cn.fantasymaker.customviews.demo.progresswebview.ProgressWebViewActivity;
 import cn.fantasymaker.customviews.demo.squareimageview.SquareImageViewActivity;
 import cn.fantasymaker.customviews.demo.wrapcontentgridview.WrapContentGridViewActivity;
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         sIntentList.add(new IntentBean("正方形ImageView", SquareImageView.class.getSimpleName(), SquareImageViewActivity.class));
         sIntentList.add(new IntentBean("包裹内容GridView", WrapContentGridView.class.getSimpleName(), WrapContentGridViewActivity.class));
         sIntentList.add(new IntentBean("带进度条WebView", ProgressWebView.class.getSimpleName(), ProgressWebViewActivity.class));
+        sIntentList.add(new IntentBean("弹性ScrollView", BounceScrollView.class.getSimpleName(), BounceScrollViewActivity.class));
     }
 
     public static class ButtonAdapter extends RecyclerView.Adapter<ButtonAdapter.ButtonViewHolder> {
