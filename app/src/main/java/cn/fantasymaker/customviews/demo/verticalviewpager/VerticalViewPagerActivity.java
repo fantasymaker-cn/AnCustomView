@@ -31,6 +31,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.Random;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cn.fantasymaker.ancustomview.VerticalViewPager;
@@ -84,7 +86,8 @@ public class VerticalViewPagerActivity extends BaseActivity {
         public Object instantiateItem(ViewGroup container, int position) {
             TextView textView = new TextView(container.getContext());
             textView.setGravity(Gravity.CENTER);
-            textView.setBackgroundColor(Color.GREEN);
+            Random random = new Random();
+            textView.setBackgroundColor(Color.rgb(random.nextInt(100) + 100, random.nextInt(100) + 100, random.nextInt(100) + 100));
             textView.setText("textview " + position);
             container.addView(textView);
             return textView;
