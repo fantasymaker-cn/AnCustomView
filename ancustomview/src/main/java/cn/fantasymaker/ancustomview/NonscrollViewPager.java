@@ -21,6 +21,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 /**
+ * ViewPager with controlling of scroll
+ *
  * Created :  2016-11-15
  * Author  :  Lixplor
  * Web     :  http://blog.lixplor.com
