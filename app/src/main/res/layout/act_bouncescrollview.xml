@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <cn.fantasymaker.ancustomview.BounceScrollView
+    <com.lixplor.fastcustomview.BounceScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -49,6 +49,6 @@
 
         </LinearLayout>
 
-    </cn.fantasymaker.ancustomview.BounceScrollView>
+    </com.lixplor.fastcustomview.BounceScrollView>
 
 </LinearLayout>

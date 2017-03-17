@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <cn.fantasymaker.ancustomview.ProgressWebView
+    <com.lixplor.fastcustomview.ProgressWebView
         android:id="@+id/pwv"
         android:layout_width="match_parent"
         android:layout_height="0dp"

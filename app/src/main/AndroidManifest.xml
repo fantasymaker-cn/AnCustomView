@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="cn.fantasymaker.customviews"
+<manifest package="com.lixplor.customviews"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.lixplor.customviews.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,11 +19,11 @@
         </activity>
 
         <!--demo activity-->
-        <activity android:name=".demo.squareimageview.SquareImageViewActivity"/>
-        <activity android:name=".demo.wrapcontentgridview.WrapContentGridViewActivity"/>
-        <activity android:name=".demo.progresswebview.ProgressWebViewActivity"/>
-        <activity android:name=".demo.bouncescrollview.BounceScrollViewActivity"/>
-        <activity android:name=".demo.verticalviewpager.VerticalViewPagerActivity"/>
+        <activity android:name="com.lixplor.customviews.demo.squareimageview.SquareImageViewActivity"/>
+        <activity android:name="com.lixplor.customviews.demo.wrapcontentgridview.WrapContentGridViewActivity"/>
+        <activity android:name="com.lixplor.customviews.demo.progresswebview.ProgressWebViewActivity"/>
+        <activity android:name="com.lixplor.customviews.demo.bouncescrollview.BounceScrollViewActivity"/>
+        <activity android:name="com.lixplor.customviews.demo.verticalviewpager.VerticalViewPagerActivity"/>
     </application>
 
 </manifest>
